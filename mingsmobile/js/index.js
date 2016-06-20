@@ -5,13 +5,14 @@ $(function(){
 
   var wh=100*n+"%";
   $('.nav_0').width(wh);
-  var lt=(100/n/3);
+  var lt=(100/n/3.5);
  
   var lt_li=lt+"%";
   $('.nav_0 li').width(lt_li);      
   var y=0;
   var w=n/2; 
-  var a=1           
+  var a=1   
+    
   $(".nav_0").swipe( {          
     swipeLeft:function() {
       if(a==4){
@@ -19,7 +20,7 @@ $(function(){
       }else{
         y=y-lt;               
         var t=y+"%";                  
-        $(this).css({'-webkit-transform':"translate("+t+")",'-webkit-transition':'600ms linear'} );
+        $(this).css({'-webkit-transform':"translate("+t+")",'-webkit-transition':'100ms linear'} );
         a++ 
       }
     },
@@ -29,12 +30,14 @@ $(function(){
       }else{
         y=y+lt;
         var t=y+"%";
-        $(this).css({'-webkit-transform':"translate("+t+")",'-webkit-transition':'600ms linear'} ); 
+        $(this).css({'-webkit-transform':"translate("+t+")",'-webkit-transition':'100ms linear'} ); 
         a--
       }
       
     }
   });
+  
+ 
 //end
 //左右点击翻页
    m=$('#content #s_1 .mask .tupian img').size();  
@@ -43,23 +46,48 @@ $(function(){
   $('#content #s_1 .mask .tupian').width(sh);
   var  ss=$(window).width()
   $('#content #s_1 .mask .tupian img').width(ss);      
-  var b=1  
-  $("#content #s_1 .mask .fanye .mask_left").click(function(){
-      if(b==4){
+  var f=1;
+ 
 
+
+   $("#content #s_1 .mask .tupian").swipe( {          
+    swipeLeft:function() {
+      if(f==4){
+        
       }else{
         $('#content #s_1 .mask .tupian').animate({"left":"-="+ss},300)
-        b=b+1
-       $("#content #s_1 .mask .fanye .nubmer").html(b+"/4")
+        f=f+1
+       $("#content #s_1 .mask .fanye .nubmer").html(f+"/4")
       }
-  }) 
-  $("#content #s_1 .mask .fanye .mask_right").click(function(){
-      if(b==1){
+    },
+    swipeRight:function() {
+      if(f==1){
+       
+      }else{
+       $('#content #s_1 .mask .tupian').animate({"left":"+="+ss},300)
+        f=f-1
+       $("#content #s_1 .mask .fanye .nubmer").html(f+"/4")
+      }
+      
+    }
+  });
+
+  $("#content #s_1 .mask .fanye .mask_left").click(function(){
+      if(f==1){
 
       }else{
         $('#content #s_1 .mask .tupian').animate({"left":"+="+ss},300)
-        b=b-1
-       $("#content #s_1 .mask .fanye .nubmer").html(b+"/4")
+        f=f-1
+       $("#content #s_1 .mask .fanye .nubmer").html(f+"/4")
+      }
+  }) 
+  $("#content #s_1 .mask .fanye .mask_right").click(function(){
+      if(f==4){
+
+      }else{
+        $('#content #s_1 .mask .tupian').animate({"left":"-="+ss},300)
+        f=f+1
+       $("#content #s_1 .mask .fanye .nubmer").html(f+"/4")
       }
   })           
  
@@ -72,7 +100,7 @@ $(function(){
     });
     
     $dragBln = false;
-    
+   
     $(".main_image").touchSlider({
         flexible : true,
         speed : 200,
@@ -138,28 +166,40 @@ $(function(){
          })
           //end//
           //mask//
-          $("#content #s_1 .img_1 .page_m").click(function(){
+          $("#content #s_1 .img_1").click(function(){
             $("#content #s_1 .mask").css("display","block")
           })
          $("#content #s_1 .mask .close").click(function(){
             $("#content #s_1 .mask").css("display","none")
          })
          //左侧导航栏的弹出//
+        
          var width=$("#content").width()
          var s=true
          $("#title .t_right img").click(function(){
             if(s==true){
-               $("#content").animate({"left":"-300px"},100)
-               $("#right_page").animate({"left":"-="+'300px'},100)
+               var k=getScrollTop()
+               var ko=k+15+"px"
+               
+                $("#right_page").css("padding-top",ko)
+               $("#content").animate({"left":"-280px"},100)
+               $("#fix").animate({"left":"-280px"},100)
+               $("#right_page").animate({"left":"-="+'280px'},100)
+
                s=false
             }else{
-                $("#content").animate({"left":"0px"},50)
-                $("#right_page").animate({"left":"+="+'300px'},1500)
+            	$("#fix").animate({"left":"0px"},100)
+                $("#content").animate({"left":"0px"},100)
+                $("#right_page").animate({"left":"+="+'280px'},100)
                 
                
                s=true
             }
          })
          //当滚动条到最底部时自动加载图文
+         
+        
+        
+         
           
 })

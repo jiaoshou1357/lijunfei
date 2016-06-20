@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+ 
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+	<script type="text/javascript">
+	    function getScrollTop() { 
+          var scrollTop = 0; 
+          if (document.documentElement && document.documentElement.scrollTop) { 
+          scrollTop = document.documentElement.scrollTop; 
+          } 
+          else if (document.body) { 
+          scrollTop = document.body.scrollTop; 
+          } 
+          return scrollTop; 
+          } 
+         
+          function getClientHeight() { 
+          var clientHeight = 0; 
+          if (document.body.clientHeight && document.documentElement.clientHeight) { 
+          clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight); 
+          } 
+          else { 
+          clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight); 
+          } 
+          return clientHeight; 
+          } 
+
+          function getScrollHeight() { 
+            return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight); 
+            } 
+            
+	</script>
+    
+   
+</head>
+<body>
+<div id="fix">
+   <div id="title" >
+       <div class="t_left"><a href="index.html"><img src="image/logo.jpg"></a></div>
+       <div class="t_right"><img src="image/n.jpg"></div>
+   </div>
+   <div class="clear"></div>
+      <div class="nav">
+        <ul class="nav_0">
+            <li><a rel="" href="main.html">FASHION</a></li>
+            <li><a rel="" href="main.html">BEAUTY</a></li>
+            <li ><a  rel="" href="main.html" >CELEBRITIES</a></li>
+            <li><a rel="" href="main.html">LIFE</a></li>
+            <li><a rel="" href="main.html">VIDEO</a></li>
+            <li><a rel="" href="main.html">BLOG</a></li>
+            <li><a rel="" href="main.html">&nbsp;&nbsp;</a></li>
+            <li><a rel="" href="main.html">&nbsp;&nbsp;</a></li>
+        </ul>
+     </div>
+    <div class="clear"></div>
+</div>
+     
+<div id="page">
+<!--弹出导航栏-->
+<div id="right_page">
+    <div class="top"><input type="button" id="search"><input type="text" id="search_box"></div>
+    <ul class="t_2">
+        <li><a href="">盤點 /</a></li>
+        <li><a href="">2016 /</a></li>
+        <li><a href="">康城 /</a></li>
+        <li><a href="">女星造型 /</a></li>
+        <li><a href="">開幕典禮 /</a></li>
+        <li><a href="">荷李活女星 </a></li>
+    </ul>
+    <h3><em>FOLLOW US</em></h3>
+    <div class="clear"></div>
+    <ul class="t_3">
+        <li><a href="">FASHION &nbsp; &nbsp; &nbsp;   |</a></li>
+        <li><a href="">BEAUTY  &nbsp; &nbsp; &nbsp;  |</a></li>
+        <li><a href="">CELEBRITIES &nbsp; &nbsp; &nbsp; |</a></li>
+        <li><a href="">Life &nbsp; &nbsp; &nbsp;   |</a></li>
+        <li><a href="">Video &nbsp; &nbsp; &nbsp;   |</a></li>
+        <li><a href="">Blog  &nbsp; &nbsp; &nbsp;  |</a></li>
+    </ul>
+     <h3><em>FOLLOW US</em></h3>
+     <div class="t_4">
+         <span ><a href=""><img src="image/facebook.png"></a></span>
+         <span><a href=""><img src="image/list_2.png"></a></span>
+     </div>
+     <h3><em>ABOUT</em></h3>
+     <P><a href="">關於MING'S</a></P>
+     <P><a href="">CONTACT</a></P>
+     <P><a href="">PRIVACY & DISCLALMER</a></P>
+     <P><a href="">ADVERTISING</a></P>
+     <div class="line_0"></div>
+     <div class="bottom">
+         <div class="m"><img src="image/m.png"></div><span>ALL CONTENT * ONE MEDIA GROUP LIMITED 2016</span>
+     </div>
+</div>
+<!--固定导航-->
+
+ 
+
+<!--end-->
+<div id="content">
+   <!--导航-->
+
+    <!--end-->
+    <div style="height:98px;width:100%;"></div>
+
+    <div id="s_1" >
+        <!--图片弹出遮罩-->
+        <div class="mask">
+            <!--
+        	<div class="close"></div>
+        	<div class="tupian"><img src="image/page1.jpg"></div>
+        	<div class="fanye">
+        		<span >←</span>
+        		<span  style="font-size:40px;"><em>1/5</em></span>
+        		<span >→</span>
+        	</div>
+        	<p>最佳旅人衣著奬</p>
+        	-->
+        	<div class="close"></div>
+        	<div class="tupian">
+        	       <img src="image/page1.jpg">
+        	       <img src="image/page1.jpg">
+        	       <img src="image/page1.jpg">
+        	       <img src="image/page1.jpg">
+        	</div>
+        	<div class="fanye">
+        		<span class="mask_left">←</span>
+        		<span  style="font-size:40px;"><em class="nubmer">1/4</em></span>
+        		<span class="mask_right">→</span>
+        	</div>
+        	<p>最佳旅人衣著奬</p>
+
+
+
+        	<div id="link">
+        		<div class="link"><a href=""><img src="image/facebook.png"></a></div>
+        		<div class="link"><a href=""><img src="image/list_2.png"></a></div>
+        		<div class="link"><a href=""><img src="image/list_3.png"></a></div>
+        	</div>
+        </div>
+        <!--end-->
+        <h3 style="font-family:doit;font-size:25px;font-weight:300;">daliy<span class="close"></span></h3>
+        <div class="line"></div>
+        <h2>勇奪「最佳旅人衣著奬」的機場時尚</h2>
+        <div class="img_1"><img src="image/page1.jpg"><span class="page_m">5&nbsp;SLIDES</span></div>
+        <p>平常人趕飛機，多數披頭散髮衣着求其，比穿睡衣好一點而已，甚至會穿拖鞋上機，機場時尚只能發生在名人身上，在機場裏的公眾人物，更是萬眾的焦點所在，隨時有狗仔隊粉絲的跟蹤拍攝，衣着又怎能馬虎？名人們的機場時尚實在是一門學問，穿得太高調不太適合，太低調也不行，掌握得恰到好處的要算是Victoria Beckham了，最近BritishAirways跟荷李活星級形象指導Elizabeth Saltzman合作，舉辦了一個名為the World’s Best Dressed Travelers選舉，碧咸嫂就榮登榜首，擊敗了Angelina Jolie、 Taylor Swift 和 Gren Stefani等，Elizabeth Saltzman認為碧咸嫂的機場時尚令人佩服，搭配上混合了中性元素的chic style套裝，經典又舒適，牛仔褲搭配高跟鞋的造型、或是連身裙款式，簡約而不失優雅，實在是機場時尚的女王！</p>
+    </div>
+    <div id="s_2">
+        <h3>Related articles</h3>
+        <div class="line_long"></div>
+        <ul>
+        	<li><div class="l_left"><img src="image/page_2.jpg"></div><div class="l_right"><p>Jacket原來是這樣穿的Jacket原來是這樣穿的</p></div></li>
+        	<li><div class="l_left"><img src="image/page_2.jpg"></div><div class="l_right"><p>Jacket原來是這樣穿的Jacket原來是這樣穿的</p></div></li>
+        	<li><div class="l_left"><img src="image/page_2.jpg"></div><div class="l_right"><p>Jacket原來是這樣穿的Jacket原來是這樣穿的</p></div></li>
+        	<li><div class="l_left"><img src="image/page_2.jpg"></div><div class="l_right"><p>Jacket原來是這樣穿的Jacket原來是這樣穿的</p></div></li>
+        	<li><div class="l_left"><img src="image/page_2.jpg"></div><div class="l_right"><p>Jacket原來是這樣穿的Jacket原來是這樣穿的</p></div></li>
+        </ul>
+    </div>
+    <div id="facebook">
+    	<div class="f_top"><span class="l"></span><span class="c">1&nbsp;comments</span><span class="r"></span></div>
+        <div class="f_b" id="f_b"
+        >
+        	<div class="txt"><textarea>Add a comment...</textarea></div>
+        	<div class="bottom">
+        		<div class="l"><img src="image/face.jpg"></div>
+        		<div class="r">
+        			<span>Susan  |  2 day ago</span>
+        			<span>good article !</span>
+        		</div>
+        	</div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="also">
+    	<h3>You may also like</h3>
+        <div class="line_long_1"></div>
+        <div class="main_visual">
+			<div class="main_image" style="text-align:center;">
+				<ul style="">
+					<li><div class="img_1">
+					    <div class="img_l"><img src="image/page_2.jpg"><h3 style="color:grey;">javkhuandfdf</h3></div>
+					    <div class="img_r"><img src="image/page_2.jpg"><h3 style="color:grey;">javkhuandfdf</h3></div>
+						
+					    </div>
+					</li>
+					
+					<li><div class="img_2">
+					     <div class="img_l"><img src="image/page_2.jpg"><h3 style="color:grey;">javkhuandfdf</h3></div>
+					      <div class="img_r"><img src="image/page_2.jpg"><h3 style="color:grey;">javkhuandfdf</h3></div>
+					     </div>
+					 </li>
+				</ul>
+				<a href="javascript:;" id="btn_prev"></a>
+				<a href="javascript:;" id="btn_next"></a>
+			</div>
+			<div class="flicking_con">
+				<a href="#">1</a>
+				<a href="#">2</a>
+			</div>
+         </div>
+    </div>
+    <div id="more">
+    	<img src="image/more.jpg">
+    </div>
+</div>
+</div>
+<script> 
+window.onscroll = function () { 
+if(getScrollTop()+getClientHeight()==getScrollHeight()){ 
+alert("到达底部"); 
+} 
+} 
+</script> 
+</body>
+</html>
